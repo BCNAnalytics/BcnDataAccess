@@ -1,9 +1,13 @@
-Package: DataAccess
+Package: BcnDataAccess
 Type: Package
-Title: What the package does (short line)
+Title: BCNAnalytics eases the access to data
 Version: 1.0
 Date: 2014-10-19
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
+Authors@R: c(person("Aleix", "Ruiz de Villa", role = c("aut"), 
+    email = "aleixrvr@gmail.com"))
+Author: Aleix Ruiz de Villa 
+Maintainer: Aleix Ruiz de Villa <aleixrvr@gmail.com>
+Description: This package gives easy access to the BCNAnalytics community to different data sources of Barcelona. 
 License: What license is it under?
+Collate: DataBranch.R DataLeave.R BuildTree.R VotsBarris.R DemoSeccioCensal.R AturAgost.R
+Imports: XML, repmis

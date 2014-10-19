@@ -12,23 +12,25 @@ DataBranch$methods( initialize = function(dataSourceE = "", ...){
   callSuper(...)
 })
 
-DataBranch$methods( afegeixBrancaInformacio = function( newName, dataSource = "" ){
+DataBranch$methods( addInformationBranch = function( newName, dataSource = "" ){
 
   if( length( dataLeavesNames ) == 0 ){
     subBranchesNames <<- c( subBranchesNames, newName )
     assign(newName, DataBranch$new( dataSource ), envir = .self)
   }else{
-    print( "Aquesta branca nomes conte pagines d'informacio" )
+    print( "This branch can only contain information sources" )
   }
 })
 
-DataBranch$methods( afegeixPaginaInformacio = function( 
+DataBranch$methods( addInformationSource = function( 
   newName, 
   getDataFunction, 
   dataSource = '',
   description = '',
   lastUpdate = '',
-  fieldDescription = matrix('') ){
+  fieldDescription = matrix(''),
+  broughtBy = ''
+  ){
 
   if( length( subBranchesNames ) == 0 ){
     dataLeavesNames <<- c( dataLeavesNames, newName )
@@ -38,16 +40,17 @@ DataBranch$methods( afegeixPaginaInformacio = function(
       dataSource, 
       description,
       lastUpdate,
-      fieldDescription
+      fieldDescription,
+      broughtBy
       ), envir = .self)
   }else{
-    print( "Aquesta branca nomes pot contenir branques" )
+    print( "This branch can only contain subbranches" )
   }
 })
 
 DataBranch$methods( show = function(){
   if( dataSource != '' ){
-    cat( '    Localitzacio de la font:\n' )
+    cat( '    Source:\n' )
     cat( dataSource )
   }
 })

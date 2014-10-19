@@ -5,7 +5,8 @@ DataLeave <- setRefClass('DataLeave',
                            lastUpdate = "character",
                            fieldDescription = "matrix",
                            leafName = "character",
-                           getDataFunction = "function"
+                           getDataFunction = "function",
+                           broughtBy = "character"
                            )
                          )
 
@@ -16,6 +17,7 @@ DataLeave$methods(
                          descriptionE = '',
                          lastUpdateE = '',
                          fieldDescriptionE = matrix(''),
+                         broughtByE = '', 
                          ... ){
   
   leafName <<- newNameE
@@ -24,34 +26,37 @@ DataLeave$methods(
   description <<- descriptionE
   lastUpdate <<- lastUpdateE
   fieldDescription <<- fieldDescriptionE
+  broughtBy <<- broughtByE
   
   callSuper(...)
 })
 
-DataLeave$methods( agafaDades = function(...){
+DataLeave$methods( getData = function(...){
   return( getDataFunction(...) )
 })
 
-DataLeave$methods( obrePaginaFont = function(){
+DataLeave$methods( openSourcePage = function(){
   shell.exec(dataSource)  
 })
 
 
 DataLeave$methods( show = function(){
-  cat( '    Localitzacio de la font: ' )
+  cat( '    Source: ' )
   cat( dataSource )
-  cat( '\n\n    Descripcio: ' )
+  cat( '\n\n    Description: ' )
   cat( description )
-  cat( '\n\n    Ultima actualitzacio: ')
+  cat( '\n\n    Last update: ')
   cat( lastUpdate )
+  cat( '\n\n    Brought by: ')
+  cat( broughtBy )
   
   if( ncol( fieldDescription) > 1 ){ 
-    View( fieldDescription, paste( 'Descripcio de camps de', leafName) )
+    View( fieldDescription, paste( 'Field description of', leafName) )
   }
 })
 
 .DollarNames.DataLeave <- function(x, pattern){
   
-  nameFuncs <- c("agafaDades()", "obrePaginaFont()")
+  nameFuncs <- c("getData()", "openSource()")
   grep(pattern, nameFuncs, value=TRUE)
 }
