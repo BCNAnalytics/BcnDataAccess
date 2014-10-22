@@ -6,6 +6,6 @@ BcnDataSources$Others$addInformationSource(
   },
   dataSource = "",
   description = "Vots per Barris",
-  lastUpdate = "Octubre 2014",
+  lastUpdate = "October 2014",
   broughtBy = "Josep Marc Mingot"  
 )

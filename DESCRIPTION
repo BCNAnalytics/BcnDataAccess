@@ -1,6 +1,6 @@
 Package: BcnDataAccess
 Type: Package
-Title: BCNAnalytics eases the access to data
+Title: Easing access to Bcn data
 Version: 1.0
 Date: 2014-10-19
 Authors@R: c(person("Aleix", "Ruiz de Villa", role = c("aut"), 
@@ -10,4 +10,4 @@ Maintainer: Aleix Ruiz de Villa <aleixrvr@gmail.com>
 Description: This package gives easy access to the BCNAnalytics community to different data sources of Barcelona. 
 License: What license is it under?
 Collate: DataBranch.R DataLeave.R BuildTree.R VotsBarris.R DemoSeccioCensal.R AturAgost.R
-Imports: XML, repmis
+Imports: XML
