@@ -14,7 +14,7 @@
   \describe{
     
     \item{\code{addInformationBranch(newName, dataSource = "")}:}{Use this method to create a new sub-branch. 'newName' should not have spaces}
-    \item{\code{addInformationSource(newName, getDataFunction, dataSource = '', description = '', lastUpdate = '', fieldDescription = matrix(''), broughtBy = '')}:}Use this method to create a new information source. 
+    \item{\code{addInformationSource(newName, getDataFunction, dataSource = '', description = '', lastUpdate = '', fieldDescription = matrix(''), broughtBy = '')}:} Use this method to create a new information source. 
       \itemize{
         \item \code{getDatafunction} is a function (may have some parameters) that returns a data.frame. It may get data from a webpage, data base or any others. 
         \item \code{dataSource}, in case it is a webpage, the function \code{openSourcePage} will open it in the browser.
@@ -47,5 +47,5 @@
 }
 
 \seealso{
-  \code{\link{DataLeave}}}
+  \code{\link{DataLeave}}
 }

@@ -34,5 +34,5 @@
 }
 
 \seealso{
-  \code{\link{DataBranch}}}
+  \code{\link{DataBranch}}
 }
