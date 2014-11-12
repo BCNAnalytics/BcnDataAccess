@@ -7,5 +7,5 @@ BcnDataSources$addInformationBranch( 'Others', '' )
 BcnDataSources$addInformationBranch( 'Idescat', 'http://www.idescat.cat' )
 BcnDataSources$Idescat$addInformationBranch( 'Cens2001', 'http://www.idescat.cat' )
 
-
+BcnDataSources$addInformationBranch( 'inAtlas', 'http://www.inAtlas.com' )
 
