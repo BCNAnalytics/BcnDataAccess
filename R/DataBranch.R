@@ -24,7 +24,8 @@ DataBranch$methods( addInformationBranch = function( newName, dataSource = "" ){
 
 DataBranch$methods( addInformationSource = function( 
   newName, 
-  getDataFunction, 
+  getDataFunction = function(){}, 
+  getMapFunction = function(){}, 
   dataSource = '',
   description = '',
   lastUpdate = '',
@@ -37,6 +38,7 @@ DataBranch$methods( addInformationSource = function(
     assign(newName, DataLeave$new( 
       newName, 
       getDataFunction,
+      getMapFunction,
       dataSource, 
       description,
       lastUpdate,

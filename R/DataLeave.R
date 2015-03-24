@@ -6,13 +6,15 @@ DataLeave <- setRefClass('DataLeave',
                            fieldDescription = "matrix",
                            leafName = "character",
                            getDataFunction = "function",
+                           getMapFunction = "function",
                            broughtBy = "character"
                            )
                          )
 
 DataLeave$methods( 
   initialize = function( newNameE, 
-                         getDataFunctionE, 
+                         getDataFunctionE = function(){}, 
+                         getMapFunctionE = function(){},
                          dataSourceE = '',
                          descriptionE = '',
                          lastUpdateE = '',
@@ -22,6 +24,7 @@ DataLeave$methods(
   
   leafName <<- newNameE
   getDataFunction <<- getDataFunctionE
+  getMapFunction <<- getMapFunctionE
   dataSource <<- dataSourceE
   description <<- descriptionE
   lastUpdate <<- lastUpdateE
@@ -33,6 +36,10 @@ DataLeave$methods(
 
 DataLeave$methods( getData = function(...){
   return( getDataFunction(...) )
+})
+
+DataLeave$methods( getMap = function(...){
+  return( getMapFunction(...) )
 })
 
 DataLeave$methods( openSourcePage = function(){
@@ -57,6 +64,6 @@ DataLeave$methods( show = function(){
 
 .DollarNames.DataLeave <- function(x, pattern){
   
-  nameFuncs <- c("getData()", "openSource()")
+  nameFuncs <- c("getData()", "openSource()", "getMap()")
   grep(pattern, nameFuncs, value=TRUE)
 }

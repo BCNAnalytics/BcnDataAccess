@@ -9,5 +9,5 @@ Author: Aleix Ruiz de Villa
 Maintainer: Aleix Ruiz de Villa <aleixrvr@gmail.com>
 Description: This package gives easy access to the BCNAnalytics community to different data sources of Barcelona. 
 License: What license is it under?
-Collate: DataBranch.R DataLeave.R BuildTree.R VotsBarris.R DemoSeccioCensal.R AturAgost.R Idescat_Catala_2001.R Idescat_Piramide_2001.R Idescat_Titulacio_2001.R Idescat_Activitat_2001.R Idescat_Professio_2001.R Idescat_Seccio_2001.R Idescat_SitPro_2001.R Idescat_Naix_2001.R inAtlas_Nacionalidad.R inAtlas_Edad.R inAtlas_Genero.R
+Collate: DataBranch.R DataLeave.R BuildTree.R VotsBarris.R DemoSeccioCensal.R AturAgost.R Idescat_Catala_2001.R Idescat_Piramide_2001.R Idescat_Titulacio_2001.R Idescat_Activitat_2001.R Idescat_Professio_2001.R Idescat_Seccio_2001.R Idescat_SitPro_2001.R Idescat_Naix_2001.R inAtlas_Nacionalidad.R inAtlas_Edad.R inAtlas_Genero.R Idescat_250m_2001_shp.R
 Imports: XML
