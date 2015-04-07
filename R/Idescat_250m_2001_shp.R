@@ -7,7 +7,7 @@ getMapFunction = function(){
   }
   tempFileName <- tempfile()
   download.file('http://arcvi.io/wp-content/uploads/2015/02/grid_lalea_250_intersec_bcnpobla_secret-1.zip', tempFileName, mode = "wb" )
-  return( readShapePoly(unzip(tempFileName)) )
+  return( readShapePoly(unzip(tempFileName, exdir = tempdir())) )
 }
 
 
