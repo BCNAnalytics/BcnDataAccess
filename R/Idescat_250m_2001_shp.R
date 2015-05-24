@@ -14,10 +14,10 @@ getMapFunction = function(){
 # AfegeixPaginaInformacio -------------------------------------------------
 
 BcnDataSources$Idescat$Grid250_2001$addInformationSource(
-  newName = 'Map250_2001',
+  newName = 'Map250_2014',
   getMapFunction = getMapFunction,
   dataSource = "http://www.idescat.cat",
-  description = "Mapa (shapefile) de grid de 250m. Informacio poblacional: sexe i edat. Censurat a menys de 15 individus, llevat de zones buides. Cens 2001. Retorna un SpatialPolygonsDataFrame (maptools package)",
+  description = "Mapa (shapefile) de grid de 250m. Informacio poblacional: sexe i edat. Censurat a menys de 15 individus, llevat de zones buides. Registre de poblacio a 1 de gener de 2014. Retorna un SpatialPolygonsDataFrame (maptools package)",
   lastUpdate = "22/3/2015",
   broughtBy = "Aleix Ruiz de Villa"  
 )
