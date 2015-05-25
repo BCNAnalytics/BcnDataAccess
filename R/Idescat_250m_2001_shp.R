@@ -13,7 +13,7 @@ getMapFunction = function(){
 
 # AfegeixPaginaInformacio -------------------------------------------------
 
-BcnDataSources$Idescat$Grid250_2001$addInformationSource(
+BcnDataSources$Idescat$Grid250_2014$addInformationSource(
   newName = 'Map250_2014',
   getMapFunction = getMapFunction,
   dataSource = "http://www.idescat.cat",
